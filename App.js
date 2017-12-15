@@ -1,15 +1,16 @@
 import React, { Component }from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Weather from "./Weather.js"
 
 export default class App extends React.Component {
   state = {
-    isLoaded: false
+    isLoaded: true
   }
   render() {
     const { isLoaded } = this.state;
     return (
       <View style={styles.container}>
-        {isLoaded ? null : (
+        {isLoaded ? <Weather /> : (
         <View style={styles.loading}>
           <Text style={styles.loadingText}>Getting the fucking weather</Text>
         </View>
@@ -18,7 +19,6 @@ export default class App extends React.Component {
     );
   }
 }
-
 
 const styles = StyleSheet.create({
   container: {
