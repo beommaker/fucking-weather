@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { yellow } from '../../Library/Caches/typescript/2.6/node_modules/@types/color-name';
 
 export default class App extends React.Component {
   render() {
@@ -17,13 +16,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   redView:{
-    flex: 1,
+    height: 50,
+    width: 50,
     backgroundColor: 'red',
   },
   yellowView:{
-    flex: 1,
+    height: 50,
+    width: 50,
     backgroundColor: 'yellow',
   }
 });
